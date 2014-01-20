@@ -1,0 +1,4 @@
+name = Jquery Migrate
+description = jQuery Migrate 1.2.1
+version = VERSION
+core = 7.x
