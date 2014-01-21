@@ -10,7 +10,7 @@
   outline: none;
   position: relative;
 }
-.contextual-links-region-active {
+.contextual-links-region-active, .contextual-links-region:hover {
   outline: #999 dashed 1px;
 }
 
@@ -69,6 +69,7 @@ div.contextual-links-wrapper ul.contextual-links {
   right: 0;
   text-align: left;
   top: 18px;
+  width: 190px;
   white-space: nowrap;
   -moz-border-radius: 4px 0 4px 4px; /* LTR */
   -webkit-border-bottom-left-radius: 4px;
@@ -84,6 +85,7 @@ div.contextual-links-active ul.contextual-links {
 }
 ul.contextual-links li {
   line-height: 100%;
+  width: 60%;
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -94,10 +96,12 @@ div.contextual-links-wrapper a {
 }
 ul.contextual-links li a {
   color: #333 !important;
+  font-weight: bold;
   display: block;
   margin: 0.25em 0;
   padding: 0.25em 1em 0.25em 0.5em;
 }
 ul.contextual-links li a:hover {
-  background-color: #bfdcee;
+  /*background-color: #bfdcee;*/
+    text-decoration: underline;
 }

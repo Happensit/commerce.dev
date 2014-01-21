@@ -299,10 +299,16 @@ ini_set('session.cookie_lifetime', 2000000);
  *
  * Remove the leading hash signs to enable.
  */
-# $conf['locale_custom_strings_en'][''] = array(
-#   'forum'      => 'Discussion board',
-#   '@count min' => '@count minutes',
-# );
+ $conf['locale_custom_strings_en'][''] = array(
+#   'forum'        => 'Discussion board',
+#   '@count min'   => '@count minutes',
+   'Add to cart'  => 'В корзину',
+   'Edit'         => 'Редактировать',
+   'Delete'       => 'Удалить',
+   'Shopping cart' => 'Корзина',
+   'Your shopping cart is empty.' => 'Ваша корзина пуста',
+
+);
 
 /**
  *

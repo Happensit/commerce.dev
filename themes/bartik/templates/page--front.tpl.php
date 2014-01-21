@@ -180,11 +180,24 @@
     <div id="content" class="column"><div class="section">
       <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
       <a id="main-content"></a>
-        <h1 class="title" id="page-title">
-          <?= "Главная страница магазина";?>
-        </h1>
 
-        <?php echo "Cтатичная главная сраница"; ?>
+        <div class="i_box">
+          <div class="i_box_content">
+            <div class="i_box_header">Только наш магазин дает примерить светильники дома</div>
+            <p>Вы можете примерить люстры отмеченные значком <img alt="дома" src="/themes/shop/img/at_home.png" /> у себя дома.
+              Закажите одну или две люстры. Посмотрите как они будут смотреться у Вас. Привезите не подошедшую в течении месяца и мы
+              <span>сразу вернем вам деньги</span>.</p></div>
+        </div>
+
+        <?php
+        /**
+         * Блок "Блок товаров на главной" отображаем только на front-page
+         * admin/structure/views/view/block_home_page/edit
+         */
+
+        $block = views_embed_view('block_home_page', 'block');
+        echo render($block);
+        ?>
 
       <?php //print render($page['content']); ?>
 

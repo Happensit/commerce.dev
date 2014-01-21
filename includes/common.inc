@@ -342,6 +342,14 @@ function _drupal_default_html_head() {
 //  );
   // Also send the generator in the HTTP header.
   //$elements['system_meta_generator']['#attached']['drupal_add_http_header'][] = array('X-Generator', $elements['system_meta_generator']['#attributes']['content']);
+  $elements['system_meta_generator'] = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'copyright',
+      'content' => 'SvetExpo',
+    ),
+  );
   return $elements;
 }
 

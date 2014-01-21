@@ -7,46 +7,10 @@
       'group' => CSS_DEFAULT,
       'preprocess' => TRUE,
     ));
-
-  drupal_add_js('(function($) {
-    $(function() {
-        $(".jcarousel").jcarousel({
-            easing: "linear",
-            wrap: "circular",
-          });
-        $(".jcarousel").jcarouselAutoscroll({ autostart: true,  interval: 5000 });
-
-        $(".jcarousel-control-prev")
-            .on("jcarouselcontrol:active", function() {
-                $(this).removeClass("inactive");
-            })
-            .on("jcarouselcontrol:inactive", function() {
-                $(this).addClass("inactive");
-            })
-            .jcarouselControl({
-                target: "-=1"
-            });
-
-        $(".jcarousel-control-next")
-            .on("jcarouselcontrol:active", function() {
-                $(this).removeClass("inactive");
-            })
-            .on("jcarouselcontrol:inactive", function() {
-                $(this).addClass("inactive");
-            })
-            .jcarouselControl({
-                target: "+=1"
-            });
-            $(".jcarousel-pagination")
-            .on("jcarouselpagination:active", "a", function() {
-                $(this).addClass("active");
-            })
-            .on("jcarouselpagination:inactive", "a", function() {
-                $(this).removeClass("active");
-            })
-            .jcarouselPagination();
-    });
-})(jQuery);', 'inline');
+  drupal_add_js(drupal_get_path('theme', 'svetexpo') . '/js/front_bunners.js', array(
+      'type' => 'file',
+      'preprocess' => TRUE
+    ));
 }
 ?>
 <div class="overlay"></div>
@@ -128,16 +92,25 @@
 				<div class="nav_shadow"></div>
                   <div class="search_form">
                     <?php
-                    $view = views_get_view('search_on_site');
-                    $view->set_display('page');
-                    $view->init_handlers();
-                    $exposed_form = $view->display_handler->get_plugin('exposed_form');
-                    print $exposed_form->render_exposed_form(TRUE);
+//                    $view = views_get_view('search_on_site');
+//                    $view->set_display('page');
+//                    $view->init_handlers();
+//                    $exposed_form = $view->display_handler->get_plugin('exposed_form');
+//                    print $exposed_form->render_exposed_form(TRUE);
                     ?>
                   </div>
 			</nav>
 			<div class="content">
-                <?php if(drupal_is_front_page()) print render($page['takeathome']); ?>
+              <div class="i_box">
+                <div class="i_box_content">
+                  <div class="i_box_header">Только наш магазин дает примерить светильники дома</div>
+                    <p>
+                      Вы можете примерить люстры отмеченные значком <img alt="дома" src="/themes/shop/img/at_home.png" /> у себя дома.
+                      Закажите одну или две люстры. Посмотрите как они будут смотреться у Вас. Привезите не подошедшую в течении месяца и мы
+                      <span>сразу вернем вам деньги</span>.
+                    </p>
+                </div>
+              </div>
 
 <?php if ($messages): ?>
     <div id="messages">
@@ -145,11 +118,8 @@
              <?php print $messages; ?>
         </div>
     </div> <!-- /.section, /#messages -->
-  <?php endif; ?>			
-<?php if ($page && !(isset($node) && $node && ($node->type=='lamp' || $node->type == 'streetlamp' ))): ?>
+  <?php endif; ?>
 <h1 class="title"><?php print $title; ?></h1>
-<?php endif; ?>
-
                 <!-- Banner -->
                 <?php if($bunner_image):?>
                       <div class="jcarousel-wrapper">
@@ -173,16 +143,26 @@
 
                <!-- End Banner -->
 
-			<?php print render($page['content']); ?>
+              <?php
+              /**
+               * Блок "Блок товаров на главной" отображаем только на front-page
+               * admin/structure/views/view/block_home_page/edit
+               */
 
-                <?php if(drupal_is_front_page()) print render($page['takeathome']); ?>
-			
-<?php $current = taxonomy_term_load(arg(2)); ?>
-<?php if ($current): ?>
-    <div class="taxonomy-description">
-        <?php echo $current->description; ?>
-    </div>
-<?php endif; ?>				
+              $block = views_embed_view('block_home_page', 'block');
+              echo render($block);
+              ?>
+
+              <div class="i_box">
+                <div class="i_box_content">
+                  <div class="i_box_header">Только наш магазин дает примерить светильники дома</div>
+                  <p>
+                    Вы можете примерить люстры отмеченные значком <img alt="дома" src="/themes/shop/img/at_home.png" /> у себя дома.
+                    Закажите одну или две люстры. Посмотрите как они будут смотреться у Вас. Привезите не подошедшую в течении месяца и мы
+                    <span>сразу вернем вам деньги</span>.
+                  </p>
+                </div>
+              </div>
 
 			</div>
 			<aside>
@@ -215,12 +195,7 @@
 					<p>
 						Скажите что пришли по объявлению на сайте и получите <span>ПРИЯТНЫЙ СЮРПРИЗ</span>
 					</p>
-                    <?php
-                    print theme('image', array(
-                        'path' => path_to_theme() . '/img/present.png',
-                        'attributes' => array('class' => 'bottom_image'),
-                        'alt' => 'Present',
-                    )); ?>
+                  <img class="bottom_image" src="/themes/shop/img/present.png" alt="Present">
 				</div>
 				<div class="banner_box">
 					<a href="/delivery.html">
@@ -237,7 +212,8 @@
       <?php endif; ?>
                 <div class="list_header">Статьи</div>
                 <div class="article_block">
-                <?php print views_embed_view('articles_page', 'article_block'); ?>
+                  Список статей
+                <?php //print views_embed_view('articles_page', 'article_block'); ?>
                 </div>
 
             </aside>
@@ -254,7 +230,8 @@
 	</div>
 	<div class="footer_box">
 		<div class="footer_menu">
-			<?php print render($page['header_menu']); ?>			
+          Нижнее меню
+			<?php //print render($page['header_menu']); ?>
 		</div>
 		<div class="footer_contacts">
 			<div class="footer_phone">

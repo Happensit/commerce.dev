@@ -48,26 +48,13 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <base href="http://<?=$_SERVER['HTTP_HOST']?>" />
 </head>
-
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
   <div id="cart_msg"></div>
-  <script type="text/javascript">
-	jQuery('#cart_msg').click(function(e){
-		if(jQuery(e.target).attr('id') == 'cart_msg_close'){
-			jQuery('#cart_msg').html('');
-		}
-	});
-  </script>
 </body>
 </html>

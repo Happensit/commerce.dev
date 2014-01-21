@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_commerce_currency_info_alter().
+ *
+ */
+
+function price_format_commerce_currency_info_alter(&$currencies, $langcode) {
+
+  $currencies['RUB']['decimals'] = 0;
+
+}
