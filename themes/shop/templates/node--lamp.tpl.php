@@ -88,7 +88,9 @@
          </div> <!-- end catalog_name -->
         <div class="catalog_box">
           <a href="<?php print $node_url; ?>" class="catalog_ilink">
-            <img class="catalog_image lazy" src="http://img.svetexpo.ru/goods/images/artelamp/a7894pl-1ab.jpg" alt="ArteLamp">
+            <?php if(isset($big_image)): ?>
+              <img class="catalog_image lazy" src="<?= $big_image; ?>" alt="ArteLamp">
+            <?php endif; ?>
           </a>
           <div class="status yes">В наличии</div><!-- End .status -->
         </div> <!-- End catalog_box -->
@@ -122,5 +124,11 @@
   <?php echo render($content['product:commerce_price']); ?>
 </h1>
 <h1>Полная нода</h1>
+  <?php if(isset($big_image)): ?>
+    <img class="catalog_image lazy" src="<?= $big_image; ?>" alt="ArteLamp">
+  <?php endif; ?>
+
+
+
 
 <?php endif; ?>

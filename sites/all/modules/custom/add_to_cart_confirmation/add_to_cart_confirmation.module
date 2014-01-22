@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function add_to_cart_confirmation_form_commerce_cart_add_to_cart_form_alter(&$form, &$form_state) {
+  $form['submit']['#ajax'] = array(
+    'callback' => 'add_to_cart_confirmation_get_data_ajax',
+    	//'progress' => array(
+                    //'message' => 'wait..',
+        //),
+  );
+  $form['#submit'][] = 'add_to_cart_confirmation_add_to_cart_form_submit';
+}
+
+
+function add_to_cart_confirmation_get_data_ajax($form, &$form_state){
+  drupal_get_messages();
+  module_load_include('inc', 'pathauto', 'pathauto');
+  $q = $form['quantity']['#value'];
+  $cart_block = module_invoke('commerce_cart', 'block_view', 'cart');
+  $product_id = $form['product_id']['#value'];
+  $product = commerce_product_load($product_id);
+  $img = str_replace(array('/', '.', '(', ')','№', '=', ' '), '_', trim($product->sku));
+  $img = mb_strtolower($img);
+
+  $query = new EntityFieldQuery;
+  $query->entityCondition('entity_type', 'node', '=')
+    ->propertyCondition('type', 'lamp')
+    ->fieldCondition('field_product', 'product_id', $product->product_id, '=')
+    ->range(0, 1);
+
+  if($result = $query->execute()) {
+    //$nid = array_shift(array_keys($result['node']));
+    $nid_key = array_keys($result['node']);
+    $nid = array_shift($nid_key);
+    $node = node_load($nid);
+    $tid = $node->field_brand['und'][0]['tid'];
+    $brand = taxonomy_term_load($tid);
+    $brand = pathauto_cleanstring($brand->name);
+    $price = commerce_currency_format($product->commerce_price['und']['0']['amount'],$product->commerce_price['und']['0']['currency_code']);
+    if($q > 1){
+      $sum = $q*$product->commerce_price['und']['0']['amount'];
+      $fprice = $q.' шт. х '.$price.' = '.commerce_currency_format($sum, $product->commerce_price['und']['0']['currency_code']);
+    }
+    else $fprice = $price;
+
+    $append ='';
+    $append .= '<div id="cart_msg_bg"></div>';
+    $append .= '<div id="cart_msg_content">';
+    $append .= '<div id = "cart_msg_close"></div>';
+    $append .= '<h2>Товар добавлен в корзину</h2>';
+    $append .= '<img id="cart_msg_img" src = "http://img.svetexpo.ru/goods/images/'.$brand.'/'.$img.'.jpg" >';
+    $append .= l($node->title, 'node/'.$node->nid);
+    $append .= '<div id = "cart_msg_price">'.$fprice.'</div>';
+    $append .= '<div style = "clear: both;"></div><span id = "cart_msg_close">продолжить покупки</span><a class = "button" href = "/cart">Перейти в корзину</a>';
+    $append .= '</div>';
+  }
+  //return drupal_json_output($array);
+  return array(
+    '#type' => 'ajax',
+    '#commands' => array(
+      ajax_command_html('.cart_box .cart_content', render($cart_block['content'])),
+      ajax_command_html('#cart_msg', $append),
+    ),
+  );
+}
+
+
+/**
+ * "Add to cart" button ajax callback.
+ */
+function add_to_cart_confirmation_add_to_cart_ajax_callback($form, &$form_state) {
+  drupal_get_messages();
+  $cart_block = module_invoke('commerce_cart', 'block_view', 'cart');
+  return array(
+    '#type' => 'ajax',
+    '#commands' => array(
+      ajax_command_html('.cart_box .cart_content', render($cart_block['content'])),//#block-commerce-cart-cart .content
+      ajax_command_alert('Товар добавлен в корзину'),
+    ),
+  );
+}
+
+/**
+ * "Add to cart" button submit callback.
+ */
+function add_to_cart_confirmation_add_to_cart_form_submit($form, &$form_state){
+  $form_state['rebuild'] = TRUE;
+}

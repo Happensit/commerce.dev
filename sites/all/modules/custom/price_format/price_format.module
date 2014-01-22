@@ -7,6 +7,35 @@
 
 function price_format_commerce_currency_info_alter(&$currencies, $langcode) {
 
-  $currencies['RUB']['decimals'] = 0;
+  $currencies['RUB']['format_callback'] = 'price_format_commerce_currency_format';
 
 }
+
+/**
+ * Currency format callback
+ *
+ * Remove decimal places from output
+ * while keeping commerce_amount_to_decimal formatting the same
+ *
+ * See: commerce_currency_format
+ */
+function price_format_commerce_currency_format($amount, $currency, $object = NULL, $convert = TRUE) {
+
+  // Format the price as a number, use 0 for no decimal places in output
+  $price = number_format(commerce_currency_round(abs($amount), $currency), 0, $currency['decimal_separator'], $currency['thousands_separator']);
+
+  // Establish the replacement values to format this price for its currency.
+  $replacements = array(
+    '@code_before' => $currency['code_placement'] == 'before' ? $currency['code'] : '',
+    '@symbol_before' => $currency['symbol_placement'] == 'before' ? $currency['symbol'] : '',
+    '@price' => $price,
+    '@symbol_after' => $currency['symbol_placement'] == 'after' ? $currency['symbol'] : '',
+    '@code_after' => $currency['code_placement'] == 'after' ? $currency['code'] : '',
+    '@negative' => $amount < 0 ? '-' : '',
+    '@symbol_spacer' => $currency['symbol_spacer'],
+    '@code_spacer' => $currency['code_spacer'],
+  );
+
+  return trim(t('@code_before@code_spacer@negative@symbol_before@price@symbol_spacer@symbol_after@code_spacer@code_after', $replacements));
+}
+

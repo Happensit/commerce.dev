@@ -1992,67 +1992,6 @@ img.catalog_image {
     width: 692px
 }
 
-/*#tabs.ui-tabs, #tabs.ui-tabs .ui-tabs-nav {*/
-    /*padding: 0 !important*/
-/*}*/
-
-/*#tabs.ui-tabs .ui-tabs-nav li {*/
-    /*margin: 0 0 1px 0 !important;*/
-    /*list-style: none;*/
-    /*float: left;*/
-    /*position: relative;*/
-    /*top: 1px;*/
-    /*border-bottom: 0 !important;*/
-    /*padding: 0;*/
-    /*white-space: nowrap*/
-/*}*/
-
-/*#tabs .ui-corner-all {*/
-    /*-moz-border-radius: 0px !important;*/
-    /*-webkit-border-radius: 0px !important;*/
-    /*border-radius: 0px !important*/
-/*}*/
-
-/*.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {*/
-    /*border-top: 2px solid #F06419 !important;*/
-    /*border-right: 2px solid #F06419 !important;*/
-    /*border-bottom: none !important;*/
-    /*border-left: 2px solid #F06419 !important*/
-/*}*/
-
-/*#tabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected {*/
-    /*margin-bottom: -3px !important;*/
-    /*padding-bottom: 1px !important*/
-/*}*/
-
-/*#tabs li.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active a {*/
-    /*color: #232323 !important*/
-/*}*/
-
-/*#tabs .ui-widget-header {*/
-    /*background: none !important;*/
-    /*border-top: none !important;*/
-    /*border-right: none !important;*/
-    /*border-bottom: 2px solid #F06419 !important;*/
-    /*border-left: none !important*/
-/*}*/
-
-/*#tabs.ui-tabs.ui-widget.ui-widget-content {*/
-    /*border: none !important*/
-/*}*/
-
-/*#tabs.ui-tabs.ui-widget.ui-widget-content a {*/
-    /*color: #0275c6 !important*/
-/*}*/
-
-/*#tabs.ui-tabs.ui-widget.ui-widget-content a:hover, #tabs.ui-tabs.ui-widget.ui-widget-content a:active {*/
-    /*color: #232323 !important*/
-/*}*/
-
-/*#tabs.ui-tabs .ui-tabs-panel {*/
-    /*padding: 1em 0 !important*/
-/*}*/
-
 #cart_msg #cart_msg_bg {
     display: block;
     position: fixed;
@@ -2090,13 +2029,13 @@ img.catalog_image {
     width: 16px;
     height: 16px;
     top: 5px;
-    background: url(/close_1.png) no-repeat;
+    background: url('../img/close_1.png') no-repeat;
     right: 5px;
     cursor: pointer
 }
 
 #cart_msg div#cart_msg_close:hover {
-    background: url(/close_2.png) no-repeat
+    background: url('../img/close_2.png') no-repeat
 }
 
 #cart_msg #cart_msg_price {

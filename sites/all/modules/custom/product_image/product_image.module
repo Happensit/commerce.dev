@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Product image custom module.
+ *
+ * Created by: Happensit
+ * http://happensit.ru/
+ */
+
+// 
+function product_image_preprocess_node(&$variables) {
+  global $base;
+  global $IMAGE_REALPATH;
+  global $IMAGE_PATH;
+
+  if ($variables['node']->type == 'lamp') {
+
+        module_load_include('inc', 'pathauto', 'pathauto');
+        $IMAGE_PATH = 'http://img.svetexpo.ru/goods/images/';
+        $sku = $variables['content']['product:commerce_price']['#object']->sku;
+        $img = str_replace(array('/', '.', '(', ')','№', '=', ' '), '_', mb_strtolower($sku));
+ 	    $base = 'interior/'.$img;
+ 	    $img .= '.jpg';
+        $brand = $variables['content']['field_product']['#object']->field_brand['und'][0]['tid'];
+        $brand_name = strtolower(taxonomy_term_load($brand)->name);
+        if (!empty($brand_name)) {
+            $brand_name = pathauto_cleanstring($brand_name);
+            $variables['big_image'] =  $IMAGE_PATH.$brand_name.'/'.$img;
+            $base = $brand_name.'/'.$base;
+
+        }
+	} elseif ($variables['node']->type == 'lamp' && $variables['view_mode'] == 'full'){
+        $IMAGE_REALPATH = '/var/www/svetexpo/data/www/img.svetexpo.ru/goods/images/'; //$_SERVER['DOCUMENT_ROOT'].'/goods/images/';
+        $i = 0;
+        $images = array();
+        do {
+          $i++;
+          $file = $IMAGE_REALPATH.$base.'_'.$i.'.jpg';
+          if (file_exists($file)) {
+            $images[] = $IMAGE_PATH.$base.'_'.$i.'.jpg';
+          } else {
+            break;
+          }
+        } while (true);
+
+        $variables['second_image'] = $images;
+     }
+
+    return $variables;
+
+}
