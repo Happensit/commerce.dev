@@ -78,20 +78,23 @@ HTML;
   }
 }
 
+/**
+ * implement hook_preprocess_page().
+ */
+function shop_preprocess_page(&$variables) {
+  if ($variables['is_front']) {
+    // Подружаем стили и js для слайдера
+    drupal_add_js(drupal_get_path('theme', 'shop') . '/js/jquery.jcarousel.min.js', array('type' => 'file', 'preprocess' => TRUE, 'scope' => 'footer'));
+    drupal_add_css(drupal_get_path('theme', 'shop') . '/style/bunners.css', array('group' => CSS_DEFAULT, 'preprocess' => TRUE));
+    drupal_add_js(drupal_get_path('theme', 'shop') . '/js/front_bunners.js', array('type' => 'file', 'preprocess' => TRUE, 'scope' => 'footer'));
+  }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/**
+ * @param $variables
+ * @return string
+ */
 function shop_pager($variables) {
   $tags = $variables['tags'];
   $element = $variables['element'];

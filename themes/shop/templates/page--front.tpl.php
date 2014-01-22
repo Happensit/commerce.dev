@@ -1,8 +1,5 @@
-<?php //if(isset($bunner_image)){
-  //drupal_add_js(drupal_get_path('theme', 'svetexpo') . '/js/jquery.jcarousel.min.js', array('type' => 'file', 'preprocess' => TRUE));
-  //drupal_add_css(drupal_get_path('theme', 'svetexpo') . '/style/bunners.css', array('group' => CSS_DEFAULT, 'preprocess' => TRUE));
-  //drupal_add_js(drupal_get_path('theme', 'svetexpo') . '/js/front_bunners.js', array('type' => 'file', 'preprocess' => TRUE));
-//}
+<?php
+//
 ?>
 <div class="overlay"></div>
 
@@ -42,7 +39,7 @@
 	<div class="light">
 		<div class="site">
 			<header>
-				<a href="<?php print $front_page; ?>" class="logo"></a>
+				<a class="logo"></a>
 				<div class="header_box">
 					<div class="header_box_phone">
 						<span>

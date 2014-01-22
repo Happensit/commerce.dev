@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43309853-926d-42ad-83e9-adaa67fb21f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/shop/img/close_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/shop/img/close_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/add_to_cart_confirmation.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/add_to_cart_confirmation.module" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/commerce_extra.admin.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/commerce_extra.api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/commerce_extra.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/commerce_extra.module" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.install" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.module" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/confirmation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/product_image/product_image.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/product_image/product_image.module" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/shop/templates/views-view-field--commerce-cart-form--default--commerce-product.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/shop/templates/views-view-table--commerce-cart-form--default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/svetexpo/style/app.css" afterPath="$PROJECT_DIR$/sites/all/themes/svetexpo/style/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/shop/templates/node--lamp.tpl.php" afterPath="$PROJECT_DIR$/themes/shop/templates/node--lamp.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/price_format/price_format.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/price_format/price_format.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/shop/js/scripts.js" afterPath="$PROJECT_DIR$/themes/shop/js/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_newest_Royal Botania_SE.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/shop/templates/page--front.tpl.php" afterPath="$PROJECT_DIR$/themes/shop/templates/page--front.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/shop/template.php" afterPath="$PROJECT_DIR$/themes/shop/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -53,21 +33,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="node--lamp.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/shop/templates/node--lamp.tpl.php">
+      <file leaf-file-name="page--front.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/shop/templates/page--front.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="14" selection-start="5705" selection-end="5705" vertical-scroll-proportion="-8.576923" vertical-offset="508" max-vertical-offset="1071">
+            <state line="89" column="18" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-11.115385" vertical-offset="1224" max-vertical-offset="3944">
               <folding>
-                <marker date="1390339748609" expanded="true" signature="5771:5791" placeholder="..." />
+                <element signature="e#2204#2267#0" expanded="true" />
+                <element signature="e#4899#5065#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product_image.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/product_image/product_image.module">
+      <file leaf-file-name="Royal Botania_SE.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/Royal Botania_SE.csv">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="46" selection-start="855" selection-end="875" vertical-scroll-proportion="-7.8461537" vertical-offset="153" max-vertical-offset="867">
+            <state line="3" column="226" selection-start="1722" selection-end="1722" vertical-scroll-proportion="-1.02" vertical-offset="0" max-vertical-offset="153">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="null.inc" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/feeds_tamper_null/plugins/null.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="3" selection-start="491" selection-end="491" vertical-scroll-proportion="0.57876104" vertical-offset="64" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -76,48 +69,12 @@
       <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/shop/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="55" selection-start="1523" selection-end="1523" vertical-scroll-proportion="-9.076923" vertical-offset="427" max-vertical-offset="3791">
+            <state line="86" column="9" selection-start="3229" selection-end="3229" vertical-scroll-proportion="-9.807693" vertical-offset="1122" max-vertical-offset="3842">
               <folding>
-                <marker date="1390347850784" expanded="true" signature="2314:2904" placeholder="..." />
-                <marker date="1390347850784" expanded="true" signature="2331:2883" placeholder="{...}" />
-                <marker date="1390347850784" expanded="true" signature="2366:2877" placeholder="{...}" />
+                <marker date="1390384536221" expanded="true" signature="2314:2904" placeholder="..." />
+                <marker date="1390384536221" expanded="true" signature="2331:2883" placeholder="{...}" />
+                <marker date="1390384536221" expanded="true" signature="2366:2877" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commerce_extra_quantity.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commerce_extra_quantity.module" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="33" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.354" vertical-offset="2254" max-vertical-offset="2805">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/shop/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views-view-field--commerce-cart-form--default--commerce-product.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/shop/templates/views-view-field--commerce-cart-form--default--commerce-product.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="77" selection-start="415" selection-end="415" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="391">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -140,8 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/themes/shop/css/template.css" />
-        <option value="$PROJECT_DIR$/themes/shop/css/app.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/price_format/price_format.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/svetexpo/style/app.css" />
         <option value="$PROJECT_DIR$/themes/shop/js/scripts.js" />
@@ -153,9 +108,11 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/product_image/product_image.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/add_to_cart_confirmation.module" />
         <option value="$PROJECT_DIR$/themes/shop/templates/views-view-field--commerce-cart-form--default--commerce-product.tpl.php" />
-        <option value="$PROJECT_DIR$/themes/shop/template.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.module" />
+        <option value="$PROJECT_DIR$/themes/shop/template.php" />
+        <option value="$PROJECT_DIR$/themes/shop/templates/page--front.tpl.php" />
+        <option value="$USER_HOME$/Desktop/Royal Botania_SE.csv" />
       </list>
     </option>
   </component>
@@ -192,7 +149,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,6 +164,108 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z-TEST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feeds-orig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z-TEST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feeds-orig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mappers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z-TEST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feeds-orig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z-TEST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z-TEST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mappers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,28 +333,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="sites" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -366,8 +402,34 @@
               <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product_image" />
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feeds_tamper_null" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,30 +458,12 @@
               <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
+              <option name="myItemId" value="feeds_tamper_null" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,97 +490,22 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce_extra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce_extra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quantity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce_extra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../www" />
-    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="PublishConfig">
@@ -594,11 +563,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MailCloud\wamp\www\commerce.dev" />
+      <recent name="C:\Users\Liubov\Desktop" />
       <recent name="D:\MailCloud\wamp\www\commerce.dev\sites\all\modules\contrib\commerce_extra\modules\quantity" />
       <recent name="D:\MailCloud\wamp\www\commerce.dev\sites\all\modules\contrib" />
       <recent name="D:\MailCloud\wamp\www\commerce.dev\themes\shop\templates" />
-      <recent name="D:\MailCloud\wamp\www\commerce.dev\themes\shop\img" />
-      <recent name="D:\MailCloud\wamp\www\commerce.dev\themes\shop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MailCloud\wamp\www\commerce.dev\sites\all\modules\custom" />
@@ -657,24 +626,28 @@
       <created>1390315977537</created>
       <updated>1390315977537</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added image module">
+      <created>1390350427074</created>
+      <updated>1390350427074</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32643312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32539684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21212122" sideWeight="0.6735669" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34772727" sideWeight="0.6735669" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21212122" sideWeight="0.67142856" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3469697" sideWeight="0.67142856" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -698,128 +671,115 @@
     </option>
     <MESSAGE value="start commit" />
     <MESSAGE value=" new template" />
-    <option name="LAST_COMMIT_MESSAGE" value=" new template" />
+    <MESSAGE value="added image module" />
+    <option name="LAST_COMMIT_MESSAGE" value="added image module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/system/system.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2084" column="4" selection-start="75639" selection-end="75640" vertical-scroll-proportion="0.35908142" vertical-offset="35205" max-vertical-offset="68646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/product_image/product_image.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="90" selection-end="90" vertical-scroll-proportion="0.063079774" vertical-offset="0" max-vertical-offset="539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/add_to_cart_confirmation.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="260" selection-end="260" vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/add_to_cart_confirmation.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="39" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.45841393" vertical-offset="239" max-vertical-offset="1632">
-          <folding>
-            <marker date="1390342282337" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/svetexpo/style/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2024" column="1" selection-start="39164" selection-end="39164" vertical-scroll-proportion="0.4383057" vertical-offset="34170" max-vertical-offset="38437">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/price_format/price_format.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="51" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.8782288" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/add_to_cart_confirmation/confirmation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="238" selection-end="238" vertical-scroll-proportion="0.22591361" vertical-offset="0" max-vertical-offset="602">
-          <folding />
-        </state>
+        <state line="8" column="11" selection-start="238" selection-end="238" vertical-scroll-proportion="0.22591361" vertical-offset="0" max-vertical-offset="602" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/shop/templates/node--lamp.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="14" selection-start="5705" selection-end="5705" vertical-scroll-proportion="-8.576923" vertical-offset="508" max-vertical-offset="1071">
-          <folding>
-            <marker date="1390339748609" expanded="true" signature="5771:5791" placeholder="..." />
-          </folding>
-        </state>
+        <state line="119" column="14" selection-start="5705" selection-end="5705" vertical-scroll-proportion="-8.576923" vertical-offset="508" max-vertical-offset="1071" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/product_image/product_image.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="46" selection-start="855" selection-end="875" vertical-scroll-proportion="-7.8461537" vertical-offset="153" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="27" column="46" selection-start="855" selection-end="875" vertical-scroll-proportion="-7.8461537" vertical-offset="153" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/shop/templates/views-view-field--commerce-cart-form--default--commerce-product.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="77" selection-start="415" selection-end="415" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="11" column="77" selection-start="415" selection-end="415" vertical-scroll-proportion="0.3321492" vertical-offset="0" max-vertical-offset="563" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/shop/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
+        <state line="0" column="0" selection-start="0" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="1" selection-start="406" selection-end="406" vertical-scroll-proportion="0.3878327" vertical-offset="0" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9714829" vertical-offset="511" max-vertical-offset="1037" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="33" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.32656828" vertical-offset="2254" max-vertical-offset="2805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/editor/editor.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Z-TEST/feeds/feeds.plugins.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.9274335" vertical-offset="2784" max-vertical-offset="3349">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/shop/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="55" selection-start="1523" selection-end="1523" vertical-scroll-proportion="-9.076923" vertical-offset="427" max-vertical-offset="3791">
+        <state line="86" column="9" selection-start="3229" selection-end="3229" vertical-scroll-proportion="-9.807693" vertical-offset="1122" max-vertical-offset="3842">
           <folding>
-            <marker date="1390347850784" expanded="true" signature="2314:2904" placeholder="..." />
-            <marker date="1390347850784" expanded="true" signature="2331:2883" placeholder="{...}" />
-            <marker date="1390347850784" expanded="true" signature="2366:2877" placeholder="{...}" />
+            <marker date="1390384536221" expanded="true" signature="2314:2904" placeholder="..." />
+            <marker date="1390384536221" expanded="true" signature="2331:2883" placeholder="{...}" />
+            <marker date="1390384536221" expanded="true" signature="2366:2877" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.js">
+    <entry file="file://$PROJECT_DIR$/Z-TEST/feeds/mappers/taxonomy.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state line="80" column="62" selection-start="2541" selection-end="2545" vertical-scroll-proportion="0.33333334" vertical-offset="1180" max-vertical-offset="5763">
+          <folding>
+            <element signature="e#7#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/shop/templates/page--front.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="18" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-11.115385" vertical-offset="1224" max-vertical-offset="3944">
+          <folding>
+            <element signature="e#2204#2267#0" expanded="true" />
+            <element signature="e#4899#5065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Royal Botania_SE.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="226" selection-start="1722" selection-end="1722" vertical-scroll-proportion="-1.02" vertical-offset="0" max-vertical-offset="153">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.css">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/feeds_tamper_null/plugins/null.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="1" selection-start="406" selection-end="406" vertical-scroll-proportion="0.3878327" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9714829" vertical-offset="511" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/commerce_extra/modules/quantity/commerce_extra_quantity.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="33" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.354" vertical-offset="2254" max-vertical-offset="2805">
+        <state line="26" column="3" selection-start="491" selection-end="491" vertical-scroll-proportion="0.57876104" vertical-offset="64" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
