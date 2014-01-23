@@ -80,11 +80,11 @@
 				<div class="nav_shadow"></div>
                   <div class="search_form">
                     <?php
-//                    $view = views_get_view('search_on_site');
-//                    $view->set_display('page');
-//                    $view->init_handlers();
-//                    $exposed_form = $view->display_handler->get_plugin('exposed_form');
-//                    print $exposed_form->render_exposed_form(TRUE);
+                    $view = views_get_view('search_on_site');
+                    $view->set_display('page');
+                    $view->init_handlers();
+                    $exposed_form = $view->display_handler->get_plugin('exposed_form');
+                    print $exposed_form->render_exposed_form(TRUE);
                     ?>
                   </div>
 			</nav>

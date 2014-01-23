@@ -77,6 +77,11 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+
+$balance = (isset($content['product:field_balance'][0]['#markup'])) ? $content['product:field_balance'][0]['#markup'] : 0;
+$status_preorder = ($balance > 0 ? TRUE : FALSE);
+
+
 ?>
 <?php if ($teaser):?>
          <div class="catalog_name">
@@ -92,7 +97,15 @@
               <img class="catalog_image lazy" src="<?= $big_image; ?>" alt="ArteLamp">
             <?php endif; ?>
           </a>
-          <div class="status yes">В наличии</div><!-- End .status -->
+          <?php if(isset($node->field_novelty['und'][0]['value'])):?>
+            <div class="novelty">Новинка</div>
+          <?php endif; ?>
+          <?php if(isset($node->field_popular_items['und'][0]['value'])): ?>
+            <div class="novelty popular">Популярный товар</div>
+          <?php endif; ?>
+
+
+          <div class="status <?= $status_preorder ? 'yes':'no'; ?>"><?= $status_preorder ? "В наличии" : "Нет в наличии"; ?></div><!-- End .status -->
         </div> <!-- End catalog_box -->
         <div class="catalog_price">
           <div class="left">
@@ -101,21 +114,6 @@
         <div class="right"><?php print render($content['field_product']); ?></div><!-- Кнопка купить -->
         <div class="clear"></div>
         </div> <!-- End .catalog_price -->
-
-
-    <?php //echo $node->field_brand; ?>
-    <?php //echo $node->field_serie; ?>
-    <?php //echo $node->field_artikul_fabriki; ?>
-    <!-- Цены -->
-    <?php //if($node->field_old_price){
-        //echo $node->field_old_price;
-    //};?>
-    <?php //echo render($content['product:commerce_price']); ?>
-    <?php //echo render($content['elements']['field_product']);?>
-
-
-
-    <p></p>
 
 <?php else: ?>
     <?php echo $title; ?>

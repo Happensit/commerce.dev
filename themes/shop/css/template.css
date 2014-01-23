@@ -350,6 +350,11 @@ form div.line-item-summary div.line-item-total  span.line-item-total-raw {
   line-height: 29px;
 }
 
+/*.button_flex.disable.checkout {*/
+
+/*}*/
+
+
 div#edit-actions  button.button_flex {margin-left:6px;}
 
 

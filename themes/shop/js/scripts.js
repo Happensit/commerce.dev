@@ -1,7 +1,7 @@
 (function ($) {
 $(document).ready(function() {
 
-    var formsearch = document.getElementById('edit-search-api-views-fulltext');
+    var formsearch = document.getElementById('edit-query');
     $(formsearch).attr('placeholder', 'Поиск по сайту...');
 	
 	$('.footer_menu ul li a').hover( function() {

@@ -10,8 +10,14 @@
  * Implements html_head_alter().
  */
 function shop_html_head_alter(&$head_elements) {
-  foreach (preg_grep('/^drupal_add_html_head_link:shortlink:/', array_keys($head_elements)) as $key) {
-    unset($head_elements[$key]);
+  $remove = array(
+    '/^drupal_add_html_head_link:alternate:/', // RSS
+    '/^drupal_add_html_head_link:shortlink:/',     // Shortlink
+  );
+  foreach ($remove as $item) {
+    foreach (preg_grep($item, array_keys($head_elements)) as $key) {
+      unset($head_elements[$key]);
+    }
   }
   if(drupal_is_front_page()){
     foreach (preg_grep('/^drupal_add_html_head_link:canonical:/', array_keys($head_elements)) as $key) {
@@ -49,39 +55,20 @@ function shop_commerce_cart_block($variables = array()) {
 }
 
 
-function shop_form_views_form_commerce_cart_form_default_alter(&$form, &$form_state) {
-  $form['output']['#markup'] = "<div class='basket1 cart'>".$form['output']['#markup'].'</div>';
-
-  if (is_array($form['edit_delete'])){
-    foreach($form['edit_delete'] as $k=> $item) {
-      if($item['#type'] == 'submit') {
-        $form['edit_delete'][$k] ['#value'] = ' ';
-      }
-    }
-
-  $form['actions']['submit']['#value'] = 'Пересчитать';
-
-  $form['actions']['checkout']['#value'] = 'Оформить';
-
-  $form['output']['#markup'] .= <<<HTML
-  <script>
- (function ($) {
-    $(document).ready(function() {
-        $("input#edit-submit").replaceWith("<button type='submit' class='button_flex bf2' onclick='window.history.back();return false;'><span><span>Вернуться к покупкам</span></span></button> <button type='submit' name='op' value='Пересчитать' class='button_flex bf2 refresh'><span><span>Пересчитать</span></span></button> ");
-        $("input#edit-checkout").replaceWith("<button type='submit' name='op' class='button_flex checkout' value='Оформить'><span><span>Оформить заказ</span></span></button>");
-    });
-  }(jQuery));
-  </script>
-HTML;
-
-    //echo ('<p style="color:red; font-weight: bold">По правилам нашего магазина минимальная сумма заказа составляет 3000 рублей.</p>');
-  }
-}
 
 /**
  * implement hook_preprocess_page().
  */
 function shop_preprocess_page(&$variables) {
+  drupal_add_js('(function ($) {
+  $(document).ready(function() {
+    $("#sidebar-first.sidebar ul.menu li > a").each(function () {
+        var termins = this.text.split("(0)")[0];
+        $(this).text(termins);
+      });
+  });
+})(jQuery);', 'inline');
+
   if ($variables['is_front']) {
     // Подружаем стили и js для слайдера
     drupal_add_js(drupal_get_path('theme', 'shop') . '/js/jquery.jcarousel.min.js', array('type' => 'file', 'preprocess' => TRUE, 'scope' => 'footer'));

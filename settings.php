@@ -307,6 +307,9 @@ ini_set('session.cookie_lifetime', 2000000);
    'Delete'       => 'Удалить',
    'Shopping cart' => 'Корзина',
    'Your shopping cart is empty.' => 'Ваша корзина пуста',
+   'Total'        => 'Всего',
+   'Total:'       => 'Всего:',
+   'Your shopping cart has been updated.' => 'Ваша корзина обновлена.'
 
 );
 

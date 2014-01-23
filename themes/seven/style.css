@@ -1,4 +1,6 @@
-
+.ui-dialog fieldset.collapsed .fieldset-wrapper, fieldset.collapsed .form-wrapper {
+    display: block !important;
+}
 /**
  * Generic elements.
  */
