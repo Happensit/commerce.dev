@@ -1,0 +1,184 @@
+<?php
+
+
+function feedback_menu() {
+
+	$items['admin/feedback'] = array(
+		'title' => 'Настройка почты',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array("feedback_settings_mail"),
+		'access arguments' => array('administer order'),
+		'file' => 'feedback.admin.inc',
+		'type' => MENU_NORMAL_ITEM,
+	);
+
+	$items['feedback'] = array(
+		'title' => variable_get('feedback_title', 'Обратная связь'),
+		'page callback' => 'feedback_form_view',
+		'access callback' => 1,
+	);
+
+	return $items;
+}
+
+function feedback_permission() {
+	return array(
+		'administer feedback' => array(
+			'title' => t('Administer feedback'),
+			'description' => t('Allows to access feedback data.'),
+		),
+	);
+}
+
+function feedback_form_view(){
+	//$form = drupal_get_form('feedback_form', 'page');
+  $form = drupal_get_form('feedback_form');
+	return drupal_render($form);
+}
+
+
+
+function feedback_form($form, &$form_state) {
+	$path = drupal_get_path('module', 'feedback');
+    drupal_add_css($path . '/css/feedback.css', 'file');
+
+	$form['label'] = array(
+		'#markup' => "<div class='h2'>". variable_get('feedback_block_title', 'Обратная связь') ."</div>",
+	);
+
+	$form['star'] = array(
+		'#markup' => "<div ><span class='star'>*</span> - обязательные для заполнения поля</div>",
+	);
+	if(variable_get('feedback_1_enabled', 1)):
+		$form['fio'] = array(
+			'#type' => 'textfield',
+			'#title' => variable_get('feedback_field_1_name', 'Имя'),
+			'#size' => 40,
+			'#maxlength' => 45,
+			'#required' => variable_get('feedback_1_required', 1),
+		);
+	endif;
+	if(variable_get('feedback_2_enabled', 1)):
+		$form['mail'] = array(
+			'#type' => 'textfield',
+			'#title' => variable_get('feedback_field_2_name', 'E-mail'),
+			'#size' => 40,
+			'#maxlength' => 45,
+			'#required' => variable_get('feedback_2_required', 1),
+		);
+	endif;
+
+  $form['phone_number'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Телефон для связи',
+    '#size' => 40,
+    '#maxlength' => 45,
+    '#required' => TRUE,
+//    '#default_value' => '+7',
+    '#attributes' => array('placeholder'=>'+7 999 999-99-99 '),
+  );
+    $form['type_apartment'] = array(
+      '#type' => 'checkboxes',
+      '#title' => 'Меня интересует информация о: ',
+      '#options' => array('Студия' => 'Студия', 'Однокомнатная' => 'Однокомнатная', 'Двухкомнатная' => 'Двухкомнатная', 'Трехкомнатная' => 'Трехкомнатная'),
+      '#required' => TRUE,
+    );
+	$form['message'] = array(
+		'#type' => 'textarea',
+		'#title' => variable_get('feedback_4_name', 'Сообщение'),
+		'#size' => 40,
+		'#maxlength' => 250,
+		'#required' => TRUE,
+	);
+
+	$form['submit'] = array(
+		'#id' => 'submit',
+		'#type' => 'submit',
+		'#value' => 'Отправить',
+	);
+	return $form;
+}
+
+function feedback_form_validate($form, &$form_state) {
+	if(variable_get('feedback_2_enabled', 1) && variable_get('feedback_2_valid', 1)):
+		if(!valid_email_address($form_state['values']['mail'])){
+					form_set_error('mail', 'Mail is invalid.');
+		}
+	endif;
+}
+
+function feedback_form_submit($form, &$form_state) {
+
+    $user = user_load(1);
+    $fields['fio'] = $form_state['complete form']['fio']['#value'];
+    $fields['message'] = $form_state['complete form']['message']['#value'];
+    $fields['phone_number'] = $form_state['complete form']['phone_number']['#value'];
+    $ApartType = $form_state['complete form']['type_apartment']['#value'];
+    $fields['type_apartment'] = getApartmentList($ApartType);
+
+	$data = array(
+			'type' => 'mail_notify',
+			'mail' => (variable_get('feedback_mail_notification')) ? variable_get('feedback_mail_notification') : $user->mail,
+	);
+	feedback_sendmail($data, $fields);
+  drupal_set_message('Ваше сообщение отправлено.');
+
+	$form_state['redirect'] = '<front>';
+}
+
+
+function feedback_sendmail($data, $fields) {
+  //dpm($field);
+	drupal_mail('feedback', $data['type'], $data['mail'], language_default(), $fields);
+}
+function feedback_block_info() {
+	$blocks['feedback'] = array(
+		'info' => 'Feedback Block',
+		'cache' => DRUPAL_NO_CACHE,
+	);
+	return $blocks;
+}
+
+function feedback_block_view($delta = '') {
+	if ($delta == 'feedback') {
+		$output = drupal_get_form('feedback_form', 'block');
+		$block = array(
+			'content' => $output,
+		);
+	}
+	return $block;
+}
+function feedback_mail($key, &$message, $params) {
+	if ($key == 'mail_notify') {
+		$body = t('Поступило новое сообщение на сайте !site.');
+		$message['subject'] = 'Обратная связь.';
+		$message['body'][] = $body;
+		if(variable_get('feedback_1_enabled', 1)):
+			$message['body'][] = 'Здравствуйте, моё Имя: ' . $params['fio'];
+		endif;
+		if(variable_get('feedback_2_enabled', 1)):
+			$message['body'][] = 'Мой E-mail: ' .  $params['mail'];
+		endif;
+        // Номер телефона
+      if(!empty($params['phone_number'])){
+        $message['body'][] = 'Мой контактный номер телефона: ' . $params['phone_number'];
+      }
+      if (!empty($params['type_apartment'])) {
+        $message['body'][] = 'У меня есть вопросы по этим типам квартир: ' . $params['type_apartment'];
+      }
+      if(!empty($params['message'])){
+	    $message['body'][] = 'Сообщение : ' . $params['message'];
+      }
+	}
+
+  dpm($message['body']);
+}
+
+function getApartmentList($x)
+{
+  $y = array();
+  foreach($x as $obj){
+    $y[] = $obj;
+  }
+  return implode(', ', $y);
+}

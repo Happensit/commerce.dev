@@ -1,0 +1,10 @@
+; $Id$
+name = Feedback Phone
+description = Кнопка Перезвоните мне
+package = J Custom Modules
+core = 7.x
+
+files[] = feedback.module
+files[] = feedback.admin.inc
+
+version = "7.x-1.0"

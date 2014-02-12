@@ -1,0 +1,129 @@
+<?php
+function feedback_phone_menu() {
+  $items = array();
+  $items['feedback_phone/%ctools_js'] = array (
+    'page callback' => 'feedback_phone_ctools_form',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+function feedback_phone_block_info() {
+	$blocks['feedback_phone'] = array(
+		'info' => 'Feedback Phone Link',
+		'cache' => DRUPAL_NO_CACHE,
+	);
+	return $blocks;
+}
+
+function feedback_phone_block_view($delta = '') {
+  $block = array();
+	if ($delta == 'feedback_phone') {
+		$output =   ctools_modal_text_button('Заказать звонок', 'feedback_phone/nojs', t('Pl'), 'ctools-modal-feedback_phone');
+		$block = array(
+			'content' => $output,
+		);
+	}
+	return $block;
+}
+function feedback_phone_init() {
+
+	ctools_include('modal');
+    ctools_include('ajax');
+    ctools_modal_add_js();
+	ctools_add_js('ajax-responder');
+
+  $modal_style = array(
+    'feedback_phone' => array(
+        'modalOptions' => array(
+        'opacity' => .5,
+        'background-color' => '#000',
+	    ),
+	    'animation' => 'fadeIn',
+	    'modalTheme' => 'CToolsFeedbackModal',
+	    'throbber' => theme('image', array('path' => ctools_image_path('ajax-loader.gif', 'feedback_modal'), 'alt' => t('Loading...'), 'title' => t('Loading'))),
+	),
+    );
+
+  drupal_add_js($modal_style, 'setting');
+
+  ctools_add_js('feedback_modal', 'feedback_modal');
+  ctools_add_css('feedback_modal', 'feedback_modal');
+}
+function feedback_phone_ctools_form() {
+	
+    ctools_include('modal');
+    ctools_include('ajax');
+	ctools_modal_add_js();
+	ctools_add_js("ajax-responder");
+		
+    $form_state = array(
+      //'title' => ('Перезвоните мне'),
+      'ajax' => TRUE,
+    );
+    $commands = ctools_modal_form_wrapper('feedback_phone_form', $form_state);
+    if (!empty($form_state['executed'])) {
+      // We'll just overwrite the form output if it was successful.
+       $commands = array();
+       $commands[] = ctools_modal_command_display('', "Отправляю сообщение..");
+       $commands[] = ctools_ajax_command_reload();
+     }
+    
+    print ajax_render($commands);
+    exit;
+}
+
+function feedback_phone_form($form, &$form_state) {
+  $path = drupal_get_path('module', 'feedback');
+  drupal_add_css($path . '/css/feedback.css', 'file');
+
+  $form['label'] = array(
+    '#markup' => "<div class='h2'>Перезвоните мне</div>",
+  );
+
+  $form['star'] = array(
+    '#markup' => "<div ><span class='star'>*</span> - обязательные для заполнения поля</div>",
+  );
+
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Ваше Имя',
+    '#size' => 40,
+    '#maxlength' => 45,
+    '#required' => TRUE,
+  );
+
+  $form['phone_number'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Номер телефона',
+    '#size' => 40,
+    '#maxlength' => 45,
+    '#required' => TRUE,
+    '#attributes' => array('placeholder'=>'+7 999 999-99-99 '),
+  );
+
+  $form['submit'] = array(
+    '#id' => 'submit',
+    '#type' => 'submit',
+    '#value' => 'Отправить',
+  );
+
+  return $form;
+}
+
+function feedback_phone_form_submit($form, &$form_state) {
+  $user = user_load(1);
+  $fields['message'] = 'Перезвоните мне! ';
+  $fields['fio'] = $form_state['complete form']['name']['#value'];
+  $fields['phone_number'] = $form_state['complete form']['phone_number']['#value'];
+
+  $data = array(
+    'type' => 'mail_notify',
+    'mail' => $user->mail,
+  );
+  feedback_sendmail($data, $fields);
+  drupal_set_message('Ваше сообщение отправлено.');
+  $form_state['redirect'] = '/node/20';
+}
+

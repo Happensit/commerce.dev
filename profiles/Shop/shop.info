@@ -1,0 +1,17 @@
+name = Shop
+;description =
+core = 7.x
+version = "1.0(dev)"
+
+dependencies[] = node
+dependencies[] = block
+dependencies[] = dblog
+dependencies[] = image
+dependencies[] = field_ui
+dependencies[] = contextual
+dependencies[] = menu
+dependencies[] = admin_menu
+dependencies[] = adminimal_admin_menu
+;dependencies[] = bluebar
+dependencies[] = module_filter
+dependencies[] = devel

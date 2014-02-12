@@ -1,0 +1,97 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the minimal installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function shop_install() {
+
+  // Allow visitor account creation, but with administrative approval.
+  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
+
+//  $default_theme = 'shop';
+//  variable_set('theme_default', $default_theme);
+//  theme_enable(array($default_theme));
+
+
+  // Insert default pre-defined node types into the database.
+  $types = array(
+    array(
+      'type' => 'page',
+      'name' => 'Страница',
+      'base' => 'node_content',
+      'description' => "Статичная страница сайта, например страница контактов.",
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+    array(
+      'type' => 'news',
+      'name' => 'Новость',
+      'base' => 'node_content',
+      'description' => '<em>Новости</em> сайта.',
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+  );
+
+  foreach ($types as $type) {
+    $type = node_type_set_defaults($type);
+    node_type_save($type);
+    node_add_body_field($type);
+  }
+
+  // Default "Basic page" to not be promoted and have comments disabled.
+  variable_set('node_options_page', array('status'));
+
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'Администратор';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+
+  variable_set('user_pictures', '1');
+  variable_set('user_picture_style', 'thumbnail');
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => 'Главная',
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+
+
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'seven')
+    ->execute();
+  variable_set('admin_theme', 'seven');
+  variable_set('node_admin_theme', '1');
+
+}
