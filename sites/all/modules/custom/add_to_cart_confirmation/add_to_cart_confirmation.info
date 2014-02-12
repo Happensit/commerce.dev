@@ -1,8 +1,0 @@
-name = Commerce add to cart confirmation
-description = Provides an "add to cart" confirmation screen.
-core = 7.x
-package = Commerce (contrib)
-dependencies[] = commerce_cart
-dependencies[] = commerce_product_ui
-dependencies[] = views
-scripts[] = confirmation.js

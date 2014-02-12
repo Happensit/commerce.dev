@@ -1,6 +1,0 @@
-name = "Minimal price order"
-description = "Min price order module"
-core = 7.x
-php = 5.x
-version = VERSION
-package = Commerce (contrib)

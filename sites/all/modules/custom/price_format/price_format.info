@@ -1,5 +1,0 @@
-name = Price format
-description = Price Format without dot
-core = 7.x
-version = VERSION
-dependencies[] = commerce

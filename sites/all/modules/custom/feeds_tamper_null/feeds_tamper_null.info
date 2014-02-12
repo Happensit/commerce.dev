@@ -1,6 +1,0 @@
-name = Feeds Tamper NULL plugin
-description = Feeds Tamper plugin to NULL fields if empty value in impoty
-core = 7.x
-package = Feeds
-version = 1.1
-

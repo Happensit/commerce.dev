@@ -1,5 +1,0 @@
-name = Product Image
-description = Add custom product image module.
-package = Svetexposhop
-core = 7.x
-version = 7.x-1.0
