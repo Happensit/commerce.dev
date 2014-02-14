@@ -550,7 +550,7 @@ function install_tasks($install_state) {
       'run' => INSTALL_TASK_RUN_IF_REACHED,
     ),
     'install_profile_modules' => array(
-      'display_name' => count($install_state['profiles']) == 1 ? 'Установка сайта' : 'Установка сайта',
+      'display_name' => count($install_state['profiles']) == 1 ? st('Install site') : st('Установка сайта'),
       'type' => 'batch',
     ),
     'install_import_locales' => array(
@@ -1620,7 +1620,7 @@ function install_check_requirements($install_state) {
     $writable = FALSE;
     $conf_path = './' . conf_path(FALSE, TRUE);
     $settings_file = $conf_path . '/settings.php';
-    $default_settings_file = DRUPAL_ROOT . '/sites/default/default.settings.php';
+    $default_settings_file = './sites/default/default.settings.php';
     $file = $conf_path;
     $exists = FALSE;
     // Verify that the directory exists.

@@ -23,15 +23,15 @@ Drupal.behaviors.textSummary = {
         }
 
         // Setup the edit/hide summary link.
-        var $link = $('<span class="field-edit-link">(<a class="link-edit-summary" href="#">' + Drupal.t('Hide summary') + '</a>)</span>').toggle(
+        var $link = $('<span class="field-edit-link"><a class="link-edit-summary" href="#">Скрыть тизер</a></span>').toggle(
           function () {
             $summary.hide();
-            $(this).find('a').html(Drupal.t('Edit summary')).end().appendTo($fullLabel);
+            $(this).find('a').html('Редактировать тизер').end().appendTo($fullLabel);
             return false;
           },
           function () {
             $summary.show();
-            $(this).find('a').html(Drupal.t('Hide summary')).end().appendTo($summaryLabel);
+            $(this).find('a').html('Скрыть тизер').end().appendTo($summaryLabel);
             return false;
           }
         ).appendTo($summaryLabel);

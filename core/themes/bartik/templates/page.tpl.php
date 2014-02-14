@@ -88,7 +88,6 @@
  */
 ?>
 <div id="page-wrapper"><div id="page">
-
   <header id="header" role="banner" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
     <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation" class="navigation">

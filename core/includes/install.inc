@@ -588,7 +588,7 @@ class DatabaseTaskException extends Exception {
  *   An array of settings that need to be updated.
  */
 function drupal_rewrite_settings($settings = array(), $prefix = '') {
-  $default_settings = DRUPAL_ROOT.'/sites/default/default.settings.php';
+  $default_settings = 'sites/default/default.settings.php';
   drupal_static_reset('conf_path');
   $settings_file = conf_path(FALSE) . '/' . $prefix . 'settings.php';
 

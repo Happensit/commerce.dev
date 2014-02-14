@@ -12,6 +12,8 @@
  * @see system_install()
  */
 function shop_install() {
+  // Enable some standard blocks.
+  $default_theme = variable_get('theme_default', 'bartik');
 
   // Allow visitor account creation, but with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
@@ -20,12 +22,10 @@ function shop_install() {
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
 
-//  $default_theme = 'shop';
-//  variable_set('theme_default', $default_theme);
-//  theme_enable(array($default_theme));
 
-
-  // Insert default pre-defined node types into the database.
+  // Insert default pre-defined node types into the database. For a complete
+  // list of available node type attributes, refer to the node type API
+  // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
   $types = array(
     array(
       'type' => 'page',
@@ -58,7 +58,7 @@ function shop_install() {
 
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
-  $admin_role->name = 'Администратор';
+  $admin_role->name = 'Admin';
   $admin_role->weight = 2;
   user_role_save($admin_role);
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
@@ -84,7 +84,6 @@ function shop_install() {
   // Update the menu router information.
   menu_rebuild();
 
-
   // Enable the admin theme.
   db_update('system')
     ->fields(array('status' => 1))
@@ -94,4 +93,10 @@ function shop_install() {
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
 
+  // Default "Basic page" to not be promoted and have comments disabled.
+  variable_set('node_options_page', array('status'));
+  variable_set('comment_page', COMMENT_NODE_HIDDEN);
+
+  // Don't display date and author information for "Basic page" nodes by default.
+  variable_set('node_submitted_page', FALSE);
 }

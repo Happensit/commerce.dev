@@ -1174,7 +1174,7 @@ function system_library() {
     'website' => 'http://jquery.com',
     'version' => '1.7.2',
     'js' => array(
-      'core/misc/jquery.min.js' => array('group' => JS_LIBRARY, 'weight' => -20),
+      'core/misc/jquery-1.7.2.min.js' => array('group' => JS_LIBRARY, 'weight' => -20),
     ),
   );
 
@@ -3385,7 +3385,7 @@ function system_timezone($abbreviation = '', $offset = -1, $is_daylight_saving_t
  * @ingroup themeable
  */
 function theme_system_powered_by() {
-  return '<span>' . t('Powered by <a href="http://happensit.com" target="_blank">Неизвестное название.. ;(</a>', array('@poweredby' => 'http://drupal.org')) . '</span>';
+  return '<span>Powered by <a href="http://happensit.com" target="_blank">Core7 ver. 0.1(dev)</a></span>';
 }
 
 /**
