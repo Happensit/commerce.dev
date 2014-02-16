@@ -993,3 +993,9 @@ div.add-or-remove-shortcuts {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
+
+form#feeds-import-form fieldset .help,
+form#feeds-import-form .form-item-feeds-FeedsCSVParser-delimiter,
+form#feeds-import-form .form-item-feeds-FeedsCSVParser-no-headers {
+    display: none !important;
+}

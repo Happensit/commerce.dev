@@ -331,17 +331,17 @@ function _drupal_default_html_head() {
   );
   // Show Drupal and the major version number in the META GENERATOR tag.
   // Get the major version.
-  list($version, ) = explode('.', VERSION);
-  $elements['system_meta_generator'] = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'Generator',
-      'content' => 'Drupal ' . $version . ' (http://drupal.org)',
-    ),
-  );
+//  list($version, ) = explode('.', VERSION);
+//  $elements['system_meta_generator'] = array(
+//    '#type' => 'html_tag',
+//    '#tag' => 'meta',
+//    '#attributes' => array(
+//      'name' => 'Generator',
+//      'content' => 'Drupal ' . $version . ' (http://drupal.org)',
+//    ),
+//  );
   // Also send the generator in the HTTP header.
-  $elements['system_meta_generator']['#attached']['drupal_add_http_header'][] = array('X-Generator', $elements['system_meta_generator']['#attributes']['content']);
+  //$elements['system_meta_generator']['#attached']['drupal_add_http_header'][] = array('X-Generator', $elements['system_meta_generator']['#attributes']['content']);
   return $elements;
 }
 
